@@ -1,0 +1,103 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fnil\fcharset0 AmericanTypewriter;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 *******************************************************************************************************************\
+README POUR LE MEMOIRE DE CHARLINE DARDENNE\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 *******************************************************************************************************************\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Ce dossier comprend tous les codes n\'e9cessaires \'e0 la reproduction des r\'e9sultats obtenus dans le Chapitre 4 et le Chapitre 5. Chaque sous-dossier correspond \'e0 une Section du m\'e9moire except\'e9 le sous-dossier nomm\'e9 data_fMRI qui reprend les matrices comportant des signaux BOLD fournies par la groupe 
+\f1\i Coma Science Group
+\f0\i0  de l\'92Universit\'e9 de Li\'e8ge.\
+\
+Les codes sont impl\'e9ment\'e9s en langage 
+\f2 Python
+\f0  (version 3.7.3).\
+\
+** Autres_classificateurs **\
+1. classification.py : Effectue une classification selon le mod\'e8le de classification s\'e9lectionn\'e9 gr\'e2ce \'e0 la variable \'ab\'a0classif\'bb.\
+2. features_generation.py : G\'e9n\'e8re les 
+\f1\i features
+\f0\i0  des donn\'e9es de type RGS selon les explications fournies lors de la troisi\'e8me classification de la section 4.1 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce fichier.\
+\
+** BoW **\
+1. classification.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0  avec le param\'e8tre 
+\f2 max_depth 
+\f0 fix\'e9 \'e0 4.\
+2. features_generation.py : G\'e9n\'e8re les
+\f1\i  features
+\f0\i0  des donn\'e9es de type RGSF et RGS selon la m\'e9thode du sac de mots expliqu\'e9e dans la Section 3.4 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce fichier.\
+\
+** Data_augmentation **\
+1. classification1.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0  avec le param\'e8tre 
+\f2 max_depth 
+\f0 fix\'e9 \'e0 4. Lors de cette classification, les sous-s\'e9ries sont consid\'e9r\'e9es comme ind\'e9pendantes.\
+2. classification2.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0  avec le param\'e8tre 
+\f2 max_depth 
+\f0 fix\'e9 \'e0 4. Lors de cette classification, les s\'e9ries temporelles d\'92origine sont reform\'e9es en regroupant les sous-s\'e9ries extraites.\
+3. features_generation.py : Applique une m\'e9thode d\'92augmentation des donn\'e9es de type RGS puis g\'e9n\'e8re les 
+\f1\i features
+\f0\i0  de ces donn\'e9es selon les explications fournies lors de la section 5.1 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce programme.\
+\
+** Combinaison **\
+1. classification.py : G\'e9n\'e8re les
+\f1\i  features, 
+\f0\i0 les 
+\f1\i targets
+\f0\i0  et effectue une combinaison de deux classifications selon les explications fournies dans la Section 5.4 du m\'e9moire. \
+\
+** Gridsearch **\
+1. classification.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0  en choisissant, parmi une s\'e9lection, la valeur du param\'e8tre 
+\f2 max_depth 
+\f0 qui optimise la performance du classificateur.\
+2. features_generation.py : G\'e9n\'e8re les 
+\f1\i features
+\f0\i0  des donn\'e9es de type RGS selon les explications fournies lors de la troisi\'e8me classification de la section 4.1 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce programme.\
+3. gs_param.py : Calcule les fr\'e9quences d\'92apparition des valeurs choisies par la m\'e9thode grid search pour le param\'e8tre 
+\f2 max_depth.
+\f0 \
+\
+** Hankel **\
+1. classification.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0 .\
+2. features_generation.py : G\'e9n\'e8re les 
+\f1\i features
+\f0\i0  pour les donn\'e9es de type RGSF et RGS selon la m\'e9thode Hankel-DMD expliqu\'e9e \'e0 la Section 5.3 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce programme.\
+\
+** Premieres_classifications **\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 1. classification.py : Effectue une classification selon le mod\'e8le 
+\f2 ExtraTreesClassifier
+\f0 .\
+2. features_generation.py : G\'e9n\'e8re les 
+\f1\i features
+\f0\i0  des donn\'e9es de type RGSF et RGS en fonction de la variable \'ab\'a0test\'a0\'bb. Les explications concernant les s\'e9lections des 
+\f1\i features
+\f0\i0  sont donn\'e9es dans la Section 4.1 du m\'e9moire. Les 
+\f1\i targets 
+\f0\i0 sont aussi g\'e9n\'e9r\'e9es par ce programme.}
