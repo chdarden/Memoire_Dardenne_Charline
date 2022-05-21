@@ -19,7 +19,7 @@ troisième classification de la section 4.1 du mémoire. Les targets sont aussi 
 1. classification.py : Effectue une classification selon le modèle ExtraTreesClassifier avec le paramètre max_depth 
 fixé à 4.
 2. features_generation.py : Génère les features des données de type RGSF et RGS selon la méthode du sac de mots 
-expliquée dans la Section 3.4 du mémoire. Les targets sont aussi générées par ce fichier.
+expliquée dans la Section 3.3 du mémoire. Les targets sont aussi générées par ce fichier.
 
 ## Data_augmentation 
 1. classification1.py : Effectue une classification selon le modèle ExtraTreesClassifier avec le paramètre max_depth 
